@@ -1,0 +1,1675 @@
+{
+	"info": {
+		"_postman_id": "221aaa05-21d6-4001-840f-0c2cc5ac056e",
+		"name": "IDSTAR L4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Karyawan",
+			"item": [
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/karyawan/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"karyawan",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/karyawan/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"karyawan",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 19:05:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n        \"updatedDate\": \"2023-05-02T02:02:21.238+00:00\",\n        \"deletedDate\": null,\n        \"nama\": \"Nama 2\",\n        \"dob\": \"2023-04-30T17:00:00.000+00:00\",\n        \"status\": \"active\",\n        \"alamat\": \"alamat 2\",\n        \"detailKaryawan\": {\n            \"id\": 1,\n            \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n            \"updatedDate\": null,\n            \"deletedDate\": null,\n            \"nik\": \"nik\",\n            \"npwp\": \"npwp\"\n        }\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "page",
+									"value": "0",
+									"type": "default"
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/karyawan/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"karyawan",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "page",
+											"value": "0",
+											"type": "default"
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/karyawan/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"karyawan",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 19:07:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"content\": [\n            {\n                \"id\": 1,\n                \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n                \"updatedDate\": \"2023-05-02T02:02:21.238+00:00\",\n                \"deletedDate\": null,\n                \"nama\": \"Nama 2\",\n                \"dob\": \"2023-04-30T17:00:00.000+00:00\",\n                \"status\": \"active\",\n                \"alamat\": \"alamat 2\",\n                \"detailKaryawan\": {\n                    \"id\": 1,\n                    \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n                    \"updatedDate\": null,\n                    \"deletedDate\": null,\n                    \"nik\": \"nik\",\n                    \"npwp\": \"npwp\"\n                }\n            }\n        ],\n        \"pageable\": {\n            \"sort\": {\n                \"empty\": true,\n                \"sorted\": false,\n                \"unsorted\": true\n            },\n            \"offset\": 0,\n            \"pageNumber\": 0,\n            \"pageSize\": 10,\n            \"unpaged\": false,\n            \"paged\": true\n        },\n        \"last\": true,\n        \"totalElements\": 1,\n        \"totalPages\": 1,\n        \"size\": 10,\n        \"number\": 0,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"first\": true,\n        \"numberOfElements\": 1,\n        \"empty\": false\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\": \"syarini 3\",\r\n    \"dob\": \"1996-01-01\",\r\n    \"status\": \"active\",\r\n    \"alamat\": \"jakarta\",\r\n    \"detailKaryawan\": {\r\n        \"nik\": \"123455\",\r\n        \"npwp\": \"12345677\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/karyawan/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"karyawan",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nama\": \"syarini\",\r\n    \"dob\": \"1996-01-01\",\r\n    \"status\": \"active\",\r\n    \"alamat\": \"jakarta\",\r\n    \"detailKaryawan\": {\r\n        \"nik\": \"123455\",\r\n        \"npwp\": \"12345677\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/karyawan/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"karyawan",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 19:10:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"createdDate\": \"2023-05-21T19:10:01.834+00:00\",\n        \"updatedDate\": null,\n        \"deletedDate\": null,\n        \"nama\": \"syarini\",\n        \"dob\": \"1996-01-01T00:00:00.000+00:00\",\n        \"status\": \"active\",\n        \"alamat\": \"jakarta\",\n        \"detailKaryawan\": {\n            \"id\": 3,\n            \"createdDate\": \"2023-05-21T19:10:01.834+00:00\",\n            \"updatedDate\": null,\n            \"deletedDate\": null,\n            \"nik\": \"123455\",\n            \"npwp\": \"12345677\"\n        }\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"nama\": \"syarini ubah\",\r\n    \"dob\": \"1996-01-01T00:00:00.000+00:00\",\r\n    \"status\": \"active\",\r\n    \"alamat\": \"jakarta\",\r\n    \"detailKaryawan\": {\r\n        \"id\": 4,\r\n        \"nik\": \"123455890\",\r\n        \"npwp\": \"12345677789\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/karyawan/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"karyawan",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"nama\": \"syarini ubah\",\r\n    \"dob\": \"1996-01-01T00:00:00.000+00:00\",\r\n    \"status\": \"active\",\r\n    \"alamat\": \"jakarta\",\r\n    \"detailKaryawan\": {\r\n        \"id\": 4,\r\n        \"nik\": \"123455890\",\r\n        \"npwp\": \"12345677789\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/karyawan/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"karyawan",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 19:16:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"createdDate\": \"2023-05-21T19:16:20.501+00:00\",\n        \"updatedDate\": \"2023-05-21T19:16:35.296+00:00\",\n        \"deletedDate\": null,\n        \"nama\": \"syarini ubah\",\n        \"dob\": \"1996-01-01T00:00:00.000+00:00\",\n        \"status\": \"active\",\n        \"alamat\": \"jakarta\",\n        \"detailKaryawan\": {\n            \"id\": 4,\n            \"createdDate\": \"2023-05-21T19:16:20.501+00:00\",\n            \"updatedDate\": \"2023-05-21T19:16:35.296+00:00\",\n            \"deletedDate\": null,\n            \"nik\": \"123455890\",\n            \"npwp\": \"12345677789\"\n        }\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/karyawan/delete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"karyawan",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/karyawan/delete/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"karyawan",
+										"delete",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 19:17:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"success\",\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Rekening",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\": \"Riki Aldi Pari\",\r\n    \"jenis\": \"BCA\",\r\n    \"rekening\": \"12345678\",\r\n    \"alamat\": \"jakarta\",\r\n    \"karyawan\": {\r\n        \"id\": \"4\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/rekening/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"rekening",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nama\": \"Riki Aldi Pari\",\r\n    \"jenis\": \"BCA\",\r\n    \"rekening\": \"12345678\",\r\n    \"alamat\": \"jakarta\",\r\n    \"karyawan\": {\r\n        \"id\": \"1\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/rekening/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"rekening",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 19:22:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"createdDate\": \"2023-05-21T19:22:02.730+00:00\",\n        \"updatedDate\": null,\n        \"deletedDate\": null,\n        \"nama\": \"Riki Aldi Pari\",\n        \"jenis\": \"BCA\",\n        \"rekening\": \"12345678\",\n        \"karyawan\": {\n            \"id\": 1,\n            \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n            \"updatedDate\": \"2023-05-02T02:02:21.238+00:00\",\n            \"deletedDate\": null,\n            \"nama\": \"Nama 2\",\n            \"dob\": \"2023-04-30T17:00:00.000+00:00\",\n            \"status\": \"active\",\n            \"alamat\": \"alamat 2\",\n            \"detailKaryawan\": {\n                \"id\": 1,\n                \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n                \"updatedDate\": null,\n                \"deletedDate\": null,\n                \"nik\": \"nik\",\n                \"npwp\": \"npwp\"\n            }\n        }\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"4\",\r\n    \"nama\": \"Riki Aldi Pari 2\",\r\n    \"jenis\": \"BCA\",\r\n    \"rekening\": \"12345678\",\r\n    \"alamat\": \"jakarta\",\r\n    \"karyawan\": {\r\n        \"id\": \"1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/rekening/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"rekening",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "size",
+									"value": "10",
+									"type": "default"
+								},
+								{
+									"key": "page",
+									"value": "0",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/rekening/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"rekening",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "size",
+											"value": "10",
+											"type": "default"
+										},
+										{
+											"key": "page",
+											"value": "0",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/rekening/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"rekening",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 19:44:41 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"content\": [\n            {\n                \"id\": 4,\n                \"createdDate\": \"2023-05-21T19:22:02.730+00:00\",\n                \"updatedDate\": null,\n                \"deletedDate\": null,\n                \"nama\": \"Riki Aldi Pari\",\n                \"jenis\": \"BCA\",\n                \"rekening\": \"12345678\",\n                \"karyawan\": {\n                    \"id\": 1,\n                    \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n                    \"updatedDate\": \"2023-05-02T02:02:21.238+00:00\",\n                    \"deletedDate\": null,\n                    \"nama\": \"Nama 2\",\n                    \"dob\": \"2023-04-30T17:00:00.000+00:00\",\n                    \"status\": \"active\",\n                    \"alamat\": \"alamat 2\",\n                    \"detailKaryawan\": {\n                        \"id\": 1,\n                        \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n                        \"updatedDate\": null,\n                        \"deletedDate\": null,\n                        \"nik\": \"nik\",\n                        \"npwp\": \"npwp\"\n                    }\n                }\n            }\n        ],\n        \"pageable\": {\n            \"sort\": {\n                \"empty\": true,\n                \"sorted\": false,\n                \"unsorted\": true\n            },\n            \"offset\": 0,\n            \"pageNumber\": 0,\n            \"pageSize\": 10,\n            \"unpaged\": false,\n            \"paged\": true\n        },\n        \"last\": true,\n        \"totalPages\": 1,\n        \"totalElements\": 1,\n        \"size\": 10,\n        \"number\": 0,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"first\": true,\n        \"numberOfElements\": 1,\n        \"empty\": false\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/rekening/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"rekening",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/rekening/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"rekening",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 May 2023 19:46:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"createdDate\": \"2023-05-21T19:22:02.730+00:00\",\n        \"updatedDate\": null,\n        \"deletedDate\": null,\n        \"nama\": \"Riki Aldi Pari\",\n        \"jenis\": \"BCA\",\n        \"rekening\": \"12345678\",\n        \"karyawan\": {\n            \"id\": 1,\n            \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n            \"updatedDate\": \"2023-05-02T02:02:21.238+00:00\",\n            \"deletedDate\": null,\n            \"nama\": \"Nama 2\",\n            \"dob\": \"2023-04-30T17:00:00.000+00:00\",\n            \"status\": \"active\",\n            \"alamat\": \"alamat 2\",\n            \"detailKaryawan\": {\n                \"id\": 1,\n                \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n                \"updatedDate\": null,\n                \"deletedDate\": null,\n                \"nik\": \"nik\",\n                \"npwp\": \"npwp\"\n            }\n        }\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/rekening/delete/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"rekening",
+								"delete",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/rekening/delete/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"rekening",
+										"delete",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 01:31:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"success\",\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Training",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tema\": \"JAVA DEVELOPER\",\r\n    \"pengajar\": \"RIKI ALDI PARI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/training/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"training",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tema\": \"JAVA DEVELOPER\",\r\n    \"pengajar\": \"RIKI ALDI PARI\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/training/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"training",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 01:26:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"createdDate\": \"2023-05-22T01:26:55.180+00:00\",\n        \"updatedDate\": null,\n        \"deletedDate\": null,\n        \"tema\": \"JAVA DEVELOPER\",\n        \"pengajar\": \"RIKI ALDI PARI\"\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"1\",\r\n    \"tema\": \"JAVA DEVELOPER 2\",\r\n    \"pengajar\": \"RIKI ALDI PARI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/training/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"training",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"1\",\r\n    \"tema\": \"JAVA DEVELOPER 2\",\r\n    \"pengajar\": \"RIKI ALDI PARI\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/training/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"training",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 01:30:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"createdDate\": \"2023-05-22T01:25:48.237+00:00\",\n        \"updatedDate\": \"2023-05-22T01:30:42.233+00:00\",\n        \"deletedDate\": null,\n        \"tema\": \"JAVA DEVELOPER 2\",\n        \"pengajar\": \"RIKI ALDI PARI\"\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "page",
+									"value": "0",
+									"type": "default"
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/training/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"training",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "page",
+											"value": "0",
+											"type": "default"
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/training/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"training",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 01:32:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"content\": [\n            {\n                \"id\": 2,\n                \"createdDate\": \"2023-05-22T01:26:55.180+00:00\",\n                \"updatedDate\": null,\n                \"deletedDate\": null,\n                \"tema\": \"JAVA DEVELOPER\",\n                \"pengajar\": \"RIKI ALDI PARI\"\n            },\n            {\n                \"id\": 1,\n                \"createdDate\": \"2023-05-22T01:25:48.237+00:00\",\n                \"updatedDate\": \"2023-05-22T01:30:42.233+00:00\",\n                \"deletedDate\": null,\n                \"tema\": \"JAVA DEVELOPER 2\",\n                \"pengajar\": \"RIKI ALDI PARI\"\n            }\n        ],\n        \"pageable\": {\n            \"sort\": {\n                \"empty\": true,\n                \"sorted\": false,\n                \"unsorted\": true\n            },\n            \"offset\": 0,\n            \"pageNumber\": 0,\n            \"pageSize\": 10,\n            \"unpaged\": false,\n            \"paged\": true\n        },\n        \"last\": true,\n        \"totalElements\": 2,\n        \"totalPages\": 1,\n        \"size\": 10,\n        \"number\": 0,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"first\": true,\n        \"numberOfElements\": 2,\n        \"empty\": false\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/training/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"training",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/training/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"training",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 01:32:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"createdDate\": \"2023-05-22T01:25:48.237+00:00\",\n        \"updatedDate\": \"2023-05-22T01:30:42.233+00:00\",\n        \"deletedDate\": null,\n        \"tema\": \"JAVA DEVELOPER 2\",\n        \"pengajar\": \"RIKI ALDI PARI\"\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/training/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"training",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/training/delete/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"training",
+										"delete",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 01:33:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"success\",\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Karyawan Training",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"karyawan\": {\r\n        \"id\": \"1\"\r\n    },\r\n    \"training\": {\r\n        \"id\": \"1\"\r\n    },\r\n    \"tanggal\": \"2023-01-01 13:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/karyawantraining/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"karyawantraining",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"karyawan\": {\r\n        \"id\": \"1\"\r\n    },\r\n    \"training\": {\r\n        \"id\": \"1\"\r\n    },\r\n    \"tanggal\": \"2023-01-01 13:00:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/karyawantraining/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"karyawantraining",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 01:35:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"createdDate\": \"2023-05-22T01:35:47.009+00:00\",\n        \"updatedDate\": null,\n        \"deletedDate\": null,\n        \"tanggal\": \"2023-01-01 13:00:00\",\n        \"karyawan\": {\n            \"id\": 1,\n            \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n            \"updatedDate\": \"2023-05-02T02:02:21.238+00:00\",\n            \"deletedDate\": null,\n            \"nama\": \"Nama 2\",\n            \"dob\": \"2023-04-30T17:00:00.000+00:00\",\n            \"status\": \"active\",\n            \"alamat\": \"alamat 2\",\n            \"detailKaryawan\": {\n                \"id\": 1,\n                \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n                \"updatedDate\": null,\n                \"deletedDate\": null,\n                \"nik\": \"nik\",\n                \"npwp\": \"npwp\"\n            }\n        },\n        \"training\": {\n            \"id\": 1,\n            \"createdDate\": \"2023-05-22T01:25:48.237+00:00\",\n            \"updatedDate\": \"2023-05-22T01:30:42.233+00:00\",\n            \"deletedDate\": null,\n            \"tema\": \"JAVA DEVELOPER 2\",\n            \"pengajar\": \"RIKI ALDI PARI\"\n        }\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"karyawan\": {\r\n        \"id\": \"1\"\r\n    },\r\n    \"training\": {\r\n        \"id\": \"1\"\r\n    },\r\n    \"tanggal\": \"2024-01-01 13:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/karyawantraining/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"karyawantraining",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"karyawan\": {\r\n        \"id\": \"1\"\r\n    },\r\n    \"training\": {\r\n        \"id\": \"1\"\r\n    },\r\n    \"tanggal\": \"2024-01-01 13:00:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/karyawantraining/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"karyawantraining",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 01:37:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"createdDate\": \"2023-05-22T01:35:47.009+00:00\",\n        \"updatedDate\": \"2023-05-22T01:37:55.913+00:00\",\n        \"deletedDate\": null,\n        \"tanggal\": \"2024-01-01 13:00:00\",\n        \"karyawan\": {\n            \"id\": 1,\n            \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n            \"updatedDate\": \"2023-05-02T02:02:21.238+00:00\",\n            \"deletedDate\": null,\n            \"nama\": \"Nama 2\",\n            \"dob\": \"2023-04-30T17:00:00.000+00:00\",\n            \"status\": \"active\",\n            \"alamat\": \"alamat 2\",\n            \"detailKaryawan\": {\n                \"id\": 1,\n                \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n                \"updatedDate\": null,\n                \"deletedDate\": null,\n                \"nik\": \"nik\",\n                \"npwp\": \"npwp\"\n            }\n        },\n        \"training\": {\n            \"id\": 1,\n            \"createdDate\": \"2023-05-22T01:25:48.237+00:00\",\n            \"updatedDate\": \"2023-05-22T01:30:42.233+00:00\",\n            \"deletedDate\": null,\n            \"tema\": \"JAVA DEVELOPER 2\",\n            \"pengajar\": \"RIKI ALDI PARI\"\n        }\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "page",
+									"value": "0",
+									"type": "default"
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/karyawantraining/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"karyawantraining",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "page",
+											"value": "0",
+											"type": "default"
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/karyawantraining/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"karyawantraining",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 01:38:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"content\": [\n            {\n                \"id\": 2,\n                \"createdDate\": \"2023-05-22T01:35:47.009+00:00\",\n                \"updatedDate\": \"2023-05-22T01:37:55.913+00:00\",\n                \"deletedDate\": null,\n                \"tanggal\": \"2024-01-01 00:00:00\",\n                \"karyawan\": {\n                    \"id\": 1,\n                    \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n                    \"updatedDate\": \"2023-05-02T02:02:21.238+00:00\",\n                    \"deletedDate\": null,\n                    \"nama\": \"Nama 2\",\n                    \"dob\": \"2023-04-30T17:00:00.000+00:00\",\n                    \"status\": \"active\",\n                    \"alamat\": \"alamat 2\",\n                    \"detailKaryawan\": {\n                        \"id\": 1,\n                        \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n                        \"updatedDate\": null,\n                        \"deletedDate\": null,\n                        \"nik\": \"nik\",\n                        \"npwp\": \"npwp\"\n                    }\n                },\n                \"training\": {\n                    \"id\": 1,\n                    \"createdDate\": \"2023-05-22T01:25:48.237+00:00\",\n                    \"updatedDate\": \"2023-05-22T01:30:42.233+00:00\",\n                    \"deletedDate\": null,\n                    \"tema\": \"JAVA DEVELOPER 2\",\n                    \"pengajar\": \"RIKI ALDI PARI\"\n                }\n            }\n        ],\n        \"pageable\": {\n            \"sort\": {\n                \"empty\": true,\n                \"sorted\": false,\n                \"unsorted\": true\n            },\n            \"offset\": 0,\n            \"pageNumber\": 0,\n            \"pageSize\": 10,\n            \"paged\": true,\n            \"unpaged\": false\n        },\n        \"last\": true,\n        \"totalPages\": 1,\n        \"totalElements\": 1,\n        \"size\": 10,\n        \"number\": 0,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"first\": true,\n        \"numberOfElements\": 1,\n        \"empty\": false\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/karyawantraining/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"karyawantraining",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/karyawantraining/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"karyawantraining",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 01:39:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"createdDate\": \"2023-05-22T01:35:47.009+00:00\",\n        \"updatedDate\": \"2023-05-22T01:37:55.913+00:00\",\n        \"deletedDate\": null,\n        \"tanggal\": \"2024-01-01 00:00:00\",\n        \"karyawan\": {\n            \"id\": 1,\n            \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n            \"updatedDate\": \"2023-05-02T02:02:21.238+00:00\",\n            \"deletedDate\": null,\n            \"nama\": \"Nama 2\",\n            \"dob\": \"2023-04-30T17:00:00.000+00:00\",\n            \"status\": \"active\",\n            \"alamat\": \"alamat 2\",\n            \"detailKaryawan\": {\n                \"id\": 1,\n                \"createdDate\": \"2023-05-02T01:59:51.199+00:00\",\n                \"updatedDate\": null,\n                \"deletedDate\": null,\n                \"nik\": \"nik\",\n                \"npwp\": \"npwp\"\n            }\n        },\n        \"training\": {\n            \"id\": 1,\n            \"createdDate\": \"2023-05-22T01:25:48.237+00:00\",\n            \"updatedDate\": \"2023-05-22T01:30:42.233+00:00\",\n            \"deletedDate\": null,\n            \"tema\": \"JAVA DEVELOPER 2\",\n            \"pengajar\": \"RIKI ALDI PARI\"\n        }\n    },\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/idstar/karyawantraining/delete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"idstar",
+								"karyawantraining",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1/idstar/karyawantraining/delete/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"idstar",
+										"karyawantraining",
+										"delete",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 May 2023 01:40:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"success\",\n    \"message\": \"Success\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
